@@ -1,0 +1,1 @@
+yobani_variable_8x8_font_bn_gfx.o: yobani_variable_8x8_font_bn_gfx.s

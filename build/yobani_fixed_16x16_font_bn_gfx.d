@@ -1,0 +1,1 @@
+yobani_fixed_16x16_font_bn_gfx.o: yobani_fixed_16x16_font_bn_gfx.s

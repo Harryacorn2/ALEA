@@ -1,0 +1,79 @@
+engineMath.o: /Users/harryacorn2/ALEA/ALEA/src/engineMath.cpp \
+ /Users/harryacorn2/ALEA/ALEA/include/engineMath.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_core.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_span.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_array.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_assert.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_type_traits.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_common.h \
+ /Users/harryacorn2/ALEA/butano/include/../hw/include/bn_hw_common.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_config_assert.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_config_doxygen.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_sstream.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_fixed_fwd.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_string_fwd.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_istring_base.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_algorithm.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_functional.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_alignment.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_utility.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_compare.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_iterator.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_array_fwd.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_span_fwd.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_fixed.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_string_view.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_vblank_callback_type.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_math.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_sin_lut.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_reciprocal_lut.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_rule_of_three_approximation.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_fixed_point.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_point.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_fixed.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_cstring.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_sprite_ptr.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_optional.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_memory_alias.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_sprite_affine_mat_ptr.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_affine_mat_attributes.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_math.h
+/Users/harryacorn2/ALEA/ALEA/include/engineMath.h:
+/Users/harryacorn2/ALEA/butano/include/bn_core.h:
+/Users/harryacorn2/ALEA/butano/include/bn_span.h:
+/Users/harryacorn2/ALEA/butano/include/bn_array.h:
+/Users/harryacorn2/ALEA/butano/include/bn_assert.h:
+/Users/harryacorn2/ALEA/butano/include/bn_type_traits.h:
+/Users/harryacorn2/ALEA/butano/include/bn_common.h:
+/Users/harryacorn2/ALEA/butano/include/../hw/include/bn_hw_common.h:
+/Users/harryacorn2/ALEA/butano/include/bn_config_assert.h:
+/Users/harryacorn2/ALEA/butano/include/bn_config_doxygen.h:
+/Users/harryacorn2/ALEA/butano/include/bn_sstream.h:
+/Users/harryacorn2/ALEA/butano/include/bn_fixed_fwd.h:
+/Users/harryacorn2/ALEA/butano/include/bn_string_fwd.h:
+/Users/harryacorn2/ALEA/butano/include/bn_istring_base.h:
+/Users/harryacorn2/ALEA/butano/include/bn_algorithm.h:
+/Users/harryacorn2/ALEA/butano/include/bn_functional.h:
+/Users/harryacorn2/ALEA/butano/include/bn_alignment.h:
+/Users/harryacorn2/ALEA/butano/include/bn_utility.h:
+/Users/harryacorn2/ALEA/butano/include/bn_compare.h:
+/Users/harryacorn2/ALEA/butano/include/bn_iterator.h:
+/Users/harryacorn2/ALEA/butano/include/bn_array_fwd.h:
+/Users/harryacorn2/ALEA/butano/include/bn_span_fwd.h:
+/Users/harryacorn2/ALEA/butano/include/bn_fixed.h:
+/Users/harryacorn2/ALEA/butano/include/bn_string_view.h:
+/Users/harryacorn2/ALEA/butano/include/bn_vblank_callback_type.h:
+/Users/harryacorn2/ALEA/butano/include/bn_math.h:
+/Users/harryacorn2/ALEA/butano/include/bn_sin_lut.h:
+/Users/harryacorn2/ALEA/butano/include/bn_reciprocal_lut.h:
+/Users/harryacorn2/ALEA/butano/include/bn_rule_of_three_approximation.h:
+/Users/harryacorn2/ALEA/butano/include/bn_fixed_point.h:
+/Users/harryacorn2/ALEA/butano/include/bn_point.h:
+/Users/harryacorn2/ALEA/butano/include/bn_fixed.h:
+/Users/harryacorn2/ALEA/butano/include/bn_cstring.h:
+/Users/harryacorn2/ALEA/butano/include/bn_sprite_ptr.h:
+/Users/harryacorn2/ALEA/butano/include/bn_optional.h:
+/Users/harryacorn2/ALEA/butano/include/bn_memory_alias.h:
+/Users/harryacorn2/ALEA/butano/include/bn_sprite_affine_mat_ptr.h:
+/Users/harryacorn2/ALEA/butano/include/bn_affine_mat_attributes.h:
+/Users/harryacorn2/ALEA/butano/include/bn_math.h:

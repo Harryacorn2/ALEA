@@ -1,0 +1,8 @@
+#!/bin/sh
+
+#  Run.sh
+#  ALEA
+#
+#  Created by Aviel Dardashti on 9/19/23.
+#  
+open -a "mGBA" ALEA.gba
