@@ -24,9 +24,9 @@ protected:
 	GameObject* mObject = NULL;
 };
 
-class Lerp : public Animation {
+class LerpAnim : public Animation {
 public:
-	Lerp(Vector2 dest, uint time, uint delay = 0);
+	LerpAnim(Vector2 dest, uint time, uint delay = 0);
 	
 	void Init() override;
 	bool Update() override;
@@ -98,6 +98,19 @@ private:
     bn::fixed mEndScale;
     bn::fixed mStartScale;
     uint mTime;
+};
+
+class Bob : public Animation {
+public:
+    Bob(Vector2 edge, uint period, uint delay = 0);
+    
+    void Init() override;
+    bool Update() override;
+    
+private:
+    uint mPeriod;
+    uint mTime;
+    Vector2 mEdge;
 };
 
 #endif

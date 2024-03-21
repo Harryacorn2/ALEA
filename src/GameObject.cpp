@@ -190,7 +190,7 @@ Animator* GameObject::GetAnimator(int index) {
 		}
 	}
 	
-	return nullptr;
+	return AddAnimator();
 }
 
 // Sprite

@@ -63,6 +63,7 @@ Crane.o: /Users/harryacorn2/ALEA/ALEA/src/Crane.cpp \
  /Users/harryacorn2/ALEA/butano/include/bn_generic_pool.h \
  /Users/harryacorn2/ALEA/butano/include/bn_generic_pool_fwd.h \
  /Users/harryacorn2/ALEA/butano/include/bn_list_fwd.h \
+ /Users/harryacorn2/ALEA/ALEA/include/Animation.h \
  /Users/harryacorn2/ALEA/ALEA/include/Die.h \
  /Users/harryacorn2/ALEA/butano/include/bn_sprite_animate_actions.h \
  /Users/harryacorn2/ALEA/butano/include/bn_vector.h \
@@ -82,7 +83,8 @@ Crane.o: /Users/harryacorn2/ALEA/ALEA/src/Crane.cpp \
  /Users/harryacorn2/ALEA/ALEA/include/Component.h \
  /Users/harryacorn2/ALEA/ALEA/include/Animator.h \
  /Users/harryacorn2/ALEA/ALEA/include/Animation.h \
- /Users/harryacorn2/ALEA/ALEA/include/Animation.h
+ /Users/harryacorn2/ALEA/ALEA/include/Log.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_string.h
 /Users/harryacorn2/ALEA/ALEA/include/Crane.h:
 /Users/harryacorn2/ALEA/ALEA/include/GameObject.h:
 /Users/harryacorn2/ALEA/ALEA/include/global.h:
@@ -147,6 +149,7 @@ Crane.o: /Users/harryacorn2/ALEA/ALEA/src/Crane.cpp \
 /Users/harryacorn2/ALEA/butano/include/bn_generic_pool.h:
 /Users/harryacorn2/ALEA/butano/include/bn_generic_pool_fwd.h:
 /Users/harryacorn2/ALEA/butano/include/bn_list_fwd.h:
+/Users/harryacorn2/ALEA/ALEA/include/Animation.h:
 /Users/harryacorn2/ALEA/ALEA/include/Die.h:
 /Users/harryacorn2/ALEA/butano/include/bn_sprite_animate_actions.h:
 /Users/harryacorn2/ALEA/butano/include/bn_vector.h:
@@ -166,4 +169,5 @@ Crane.o: /Users/harryacorn2/ALEA/ALEA/src/Crane.cpp \
 /Users/harryacorn2/ALEA/ALEA/include/Component.h:
 /Users/harryacorn2/ALEA/ALEA/include/Animator.h:
 /Users/harryacorn2/ALEA/ALEA/include/Animation.h:
-/Users/harryacorn2/ALEA/ALEA/include/Animation.h:
+/Users/harryacorn2/ALEA/ALEA/include/Log.h:
+/Users/harryacorn2/ALEA/butano/include/bn_string.h:

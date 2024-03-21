@@ -107,6 +107,7 @@ SelectAny.o: /Users/harryacorn2/ALEA/ALEA/src/SelectAny.cpp \
  /Users/harryacorn2/ALEA/butano/include/bn_generic_pool.h \
  /Users/harryacorn2/ALEA/butano/include/bn_generic_pool_fwd.h \
  /Users/harryacorn2/ALEA/butano/include/bn_list_fwd.h \
+ /Users/harryacorn2/ALEA/ALEA/include/Animation.h \
  /Users/harryacorn2/ALEA/ALEA/include/Die.h \
  /Users/harryacorn2/ALEA/ALEA/include/DieRoll.h \
  /Users/harryacorn2/ALEA/ALEA/include/Log.h \
@@ -219,6 +220,7 @@ SelectAny.o: /Users/harryacorn2/ALEA/ALEA/src/SelectAny.cpp \
 /Users/harryacorn2/ALEA/butano/include/bn_generic_pool.h:
 /Users/harryacorn2/ALEA/butano/include/bn_generic_pool_fwd.h:
 /Users/harryacorn2/ALEA/butano/include/bn_list_fwd.h:
+/Users/harryacorn2/ALEA/ALEA/include/Animation.h:
 /Users/harryacorn2/ALEA/ALEA/include/Die.h:
 /Users/harryacorn2/ALEA/ALEA/include/DieRoll.h:
 /Users/harryacorn2/ALEA/ALEA/include/Log.h:

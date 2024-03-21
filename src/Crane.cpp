@@ -6,10 +6,11 @@
 #include "Die.h"
 #include "Animator.h"
 #include "Animation.h"
+#include "Log.h"
 
 // MARK: - Pillar
 
-Pillar::Pillar(int i) {
+Pillar::Pillar(int i, int inc) {
     mDieType = i;
     AddAnimator();
     
@@ -18,7 +19,7 @@ Pillar::Pillar(int i) {
             mDice.push_back(new D4(0, Vector2(0, 0), 4));
             this->AddChild(mDice[0]);
             
-            this->SetPosition(Vector2(Crane::mCloseWidth*6, Crane::mCloseHeight*6));
+            this->SetPosition(Vector2(Crane::mCloseWidth*inc, Crane::mCloseHeight*inc));
             this->SetScale(0.78125);
             break;
             
@@ -26,7 +27,7 @@ Pillar::Pillar(int i) {
             mDice.push_back(new D6(0, Vector2(0, 0), 6));
             this->AddChild(mDice[0]);
             
-            this->SetPosition(Vector2(Crane::mFarWidth*6, Crane::mFarHeight*6));
+            this->SetPosition(Vector2(Crane::mFarWidth*inc, Crane::mFarHeight*inc));
             this->SetScale(0.59375);
             break;
             
@@ -34,7 +35,7 @@ Pillar::Pillar(int i) {
             mDice.push_back(new D8(0, Vector2(0, 0), 8));
             this->AddChild(mDice[0]);
             
-            this->SetPosition(Vector2(0, Crane::mBackHeight*6));
+            this->SetPosition(Vector2(0, Crane::mBackHeight*inc));
             this->SetScale(0.52);
             break;
             
@@ -42,7 +43,7 @@ Pillar::Pillar(int i) {
             mDice.push_back(new D10(0, Vector2(0, 0), 10));
             this->AddChild(mDice[0]);
             
-            this->SetPosition(Vector2(-Crane::mFarWidth*6, Crane::mFarHeight*6));
+            this->SetPosition(Vector2(-Crane::mFarWidth*inc, Crane::mFarHeight*inc));
             this->SetScale(0.59375);
             break;
             
@@ -50,7 +51,7 @@ Pillar::Pillar(int i) {
             mDice.push_back(new D12(0, Vector2(0, 0), 12));
             this->AddChild(mDice[0]);
             
-            this->SetPosition(Vector2(-Crane::mCloseWidth*6, Crane::mCloseHeight*6));
+            this->SetPosition(Vector2(-Crane::mCloseWidth*inc, Crane::mCloseHeight*inc));
             this->SetScale(0.78125);
             break;
             
@@ -58,7 +59,7 @@ Pillar::Pillar(int i) {
             mDice.push_back(new D20(0, Vector2(0, 0), 20));
             this->AddChild(mDice[0]);
             
-            this->SetPosition(Vector2(0, Crane::mFrontHeight*6));
+            this->SetPosition(Vector2(0, Crane::mFrontHeight*inc));
             break;
             
         default:
@@ -202,6 +203,15 @@ void Pillar::ApplyPillarInformation(PillarInformation p) {
     
     Animation* anim = new EaseOutAndScale(p.pos, p.scale, 20);
     
+//    Vector2 mod(0, 0);
+//    
+//    if (p.scale == 1) {
+//        mod.y -= (mHeightOnAddDie * (mDice.size()-1));
+//    }
+//    
+//    Animation* anim = new EaseOutAndScaleOnCrane(p.angle, p.scale, 20, mod);
+//    currentAngle = p.angle;
+    
     Animator* animator = this->GetAnimator();
     
     animator->ClearAllAnimations();
@@ -242,24 +252,46 @@ int Pillar::GetDieType() {
 
 // MARK: - Crane
 
+bool Crane::mFirst = true;
+
 Crane::Crane() {
-    mPillars[0] = new Pillar(20);
-    mPillars[1] = new Pillar(12);
-    mPillars[2] = new Pillar(10);
-    mPillars[3] = new Pillar(8);
-    mPillars[4] = new Pillar(6);
-    mPillars[5] = new Pillar(4);
+    if (mFirst) {
+        mPillars[0] = new Pillar(20, 1);
+        mPillars[1] = new Pillar(12, 1);
+        mPillars[2] = new Pillar(10, 1);
+        mPillars[3] = new Pillar(8, 1);
+        mPillars[4] = new Pillar(6, 1);
+        mPillars[5] = new Pillar(4, 1);
+        
+        mFirst = false;
+        
+    } else {
+        mPillars[0] = new Pillar(20);
+        mPillars[1] = new Pillar(12);
+        mPillars[2] = new Pillar(10);
+        mPillars[3] = new Pillar(8);
+        mPillars[4] = new Pillar(6);
+        mPillars[5] = new Pillar(4);
+    }
     
     for (int i = 0; i < 6; i++) {
         this->AddChild(mPillars[i]);
     }
     
-    mPillarData.push_back(PillarInformation(Vector2(0, Crane::mFrontHeight), 1, 100));
-    mPillarData.push_back(PillarInformation(Vector2(-Crane::mCloseWidth, Crane::mCloseHeight), 0.78125, 200));
-    mPillarData.push_back(PillarInformation(Vector2(-Crane::mFarWidth, Crane::mFarHeight), 0.59375, 500));
-    mPillarData.push_back(PillarInformation(Vector2(0, Crane::mBackHeight), 0.52, 1000));
-    mPillarData.push_back(PillarInformation(Vector2(Crane::mFarWidth, Crane::mFarHeight), 0.59375, 500));
-    mPillarData.push_back(PillarInformation(Vector2(Crane::mCloseWidth, Crane::mCloseHeight), 0.78125, 200));
+    // Before angle was added
+//    mPillarData.push_back(PillarInformation(Vector2(0, Crane::mFrontHeight), 1, 100));
+//    mPillarData.push_back(PillarInformation(Vector2(-Crane::mCloseWidth, Crane::mCloseHeight), 0.78125, 200));
+//    mPillarData.push_back(PillarInformation(Vector2(-Crane::mFarWidth, Crane::mFarHeight), 0.59375, 500));
+//    mPillarData.push_back(PillarInformation(Vector2(0, Crane::mBackHeight), 0.52, 1000));
+//    mPillarData.push_back(PillarInformation(Vector2(Crane::mFarWidth, Crane::mFarHeight), 0.59375, 500));
+//    mPillarData.push_back(PillarInformation(Vector2(Crane::mCloseWidth, Crane::mCloseHeight), 0.78125, 200));
+    
+    mPillarData.push_back(PillarInformation(Vector2(0, Crane::mFrontHeight), 1, 100, 0.25));
+    mPillarData.push_back(PillarInformation(Vector2(-Crane::mCloseWidth, Crane::mCloseHeight), 0.78125, 200, 0.41666));
+    mPillarData.push_back(PillarInformation(Vector2(-Crane::mFarWidth, Crane::mFarHeight), 0.59375, 500, 0.58333));
+    mPillarData.push_back(PillarInformation(Vector2(0, Crane::mBackHeight), 0.52, 1000, .75));
+    mPillarData.push_back(PillarInformation(Vector2(Crane::mFarWidth, Crane::mFarHeight), 0.59375, 500, 0.91666));
+    mPillarData.push_back(PillarInformation(Vector2(Crane::mCloseWidth, Crane::mCloseHeight), 0.78125, 200, 0.08333));
     
     Incorperate();
 }
@@ -357,8 +389,68 @@ void Crane::Skip() {
     }
 }
 
-// MARK: - RotateOnCrane
+// MARK: - EaseOutAndScaleOnCrane
+Ellipse EaseOutAndScaleOnCrane::CraneEllipse = Ellipse(80, 46);
 
+EaseOutAndScaleOnCrane::EaseOutAndScaleOnCrane(bn::fixed destPos, bn::fixed destScale, uint time, Vector2 mod, uint delay) : Animation(delay), mModifier(mod){
+    mEndScale = destScale;
+    mEndPosition = destPos;
+    mTime = time;
+}
+
+void EaseOutAndScaleOnCrane::Init() {
+    mStartScale = mObject->GetScale();
+    Vector2 pos = mObject->GetPosition();
+    mStartPosition = bn::atan2((pos.y + CraneEllipse.mPosition.y).integer(), (pos.x + CraneEllipse.mPosition.x).integer());
+    if (mStartPosition < 0) mStartPosition += 1;
+    
+    if (bn::abs(mEndPosition - mStartPosition) > 0.5) {
+        if (mEndPosition < mStartPosition) {
+            mEndPosition += 1;
+        } else {
+            mStartPosition += 1;
+        }
+    }
+}
+
+bool EaseOutAndScaleOnCrane::Update() {
+    if (mCurrentFrame >= mTime) {
+        mObject->SetPosition(mModifier + CraneEllipse.GetPointOnEllipse(mEndPosition));
+//        mObject->SetScale(mEndScale);
+        return true;
+    }
+    
+    bn::fixed s2 = bn::fixed(mCurrentFrame)/bn::fixed(mTime);
+    s2 = bn::sqrt(s2);
+    
+    bn::fixed currentAngle = LerpFixed(mStartPosition, mEndPosition, s2);
+    Vector2 currentPos = CraneEllipse.GetPointOnEllipse(currentAngle);
+    
+//    bn::fixed currentScale = LerpFixed(mStartScale, mEndScale, s2);
+    
+    bn::fixed v = ((currentPos.y) + (CraneEllipse.mHeight/2)) / CraneEllipse.mHeight; // Represents vertical element 0-1
+    bn::fixed scaleDifference = maxScale - minScale;
+    bn::fixed currentScale = (scaleDifference * v) + minScale;
+    
+    mObject->SetPosition(currentPos + (mModifier * s2));
+    mObject->SetScale(currentScale);
+    
+    return false;
+}
+
+uint EaseOutAndScaleOnCrane::GetTime() {
+    return mTime;
+}
+
+void EaseOutAndScaleOnCrane::SetTime(uint time) {
+    mTime = time;
+}
+
+//bn::fixed mEndPosition;
+//bn::fixed mStartPosition;
+//bn::fixed mEndScale;
+//bn::fixed mStartScale;
+//uint mTime;
 
 
 #endif

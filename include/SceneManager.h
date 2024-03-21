@@ -25,6 +25,7 @@ public:
     
     static void SelectD6();
     static void SelectAny();
+    static void EllipseTest();
 	
 	static void Quit();
 	static void Unload();

@@ -15,6 +15,7 @@ int main()
 //        SceneManager::ShapeTest();
 //        SceneManager::TextObjectTest();
 //        SceneManager::SRAMTest();
+        SceneManager::EllipseTest();
         
 //        SceneManager::SelectD6();
         SceneManager::SelectAny();

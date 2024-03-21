@@ -261,4 +261,24 @@ public:
 	static bool UnitTest();
 };
 
+class Ellipse {
+public:
+    Vector2 mPosition;
+    bn::fixed mWidth;
+    bn::fixed mHeight;
+    
+    Ellipse(bn::fixed width, bn::fixed height, Vector2 pos = Vector2(0, 0)) : mWidth(width), mHeight(height), mPosition(pos) {}
+    
+    Vector2 GetPointOnEllipse(bn::fixed t) {
+        return Vector2(((mWidth/2) * bn::cos(t)) + mPosition.x, ((mHeight/2) * bn::sin(t)) + mPosition.y);
+    }
+    
+    Vector2 GetPointOnEllipse(Vector2 point) {
+        bn::fixed angle = bn::atan2((mPosition.y + point.y).integer(), (mPosition.x + point.x).integer());
+        return GetPointOnEllipse(angle);
+    }
+};
+
+bn::fixed LerpFixed(bn::fixed a, bn::fixed b, bn::fixed t);
+
 #endif

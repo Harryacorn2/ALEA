@@ -56,7 +56,9 @@ Animation.o: /Users/harryacorn2/ALEA/ALEA/src/Animation.cpp \
  /Users/harryacorn2/ALEA/butano/include/bn_color.h \
  /Users/harryacorn2/ALEA/butano/include/bn_bpp_mode.h \
  /Users/harryacorn2/ALEA/butano/include/bn_compression_type.h \
- /Users/harryacorn2/ALEA/ALEA/include/Transform.h
+ /Users/harryacorn2/ALEA/ALEA/include/Transform.h \
+ /Users/harryacorn2/ALEA/ALEA/include/Log.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_string.h
 /Users/harryacorn2/ALEA/ALEA/include/Animation.h:
 /Users/harryacorn2/ALEA/ALEA/include/global.h:
 /Users/harryacorn2/ALEA/butano/include/bn_core.h:
@@ -115,3 +117,5 @@ Animation.o: /Users/harryacorn2/ALEA/ALEA/src/Animation.cpp \
 /Users/harryacorn2/ALEA/butano/include/bn_bpp_mode.h:
 /Users/harryacorn2/ALEA/butano/include/bn_compression_type.h:
 /Users/harryacorn2/ALEA/ALEA/include/Transform.h:
+/Users/harryacorn2/ALEA/ALEA/include/Log.h:
+/Users/harryacorn2/ALEA/butano/include/bn_string.h:

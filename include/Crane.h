@@ -13,11 +13,13 @@ struct PillarInformation {
     Vector2 pos;
     bn::fixed scale;
     int z;
+    
+    bn::fixed angle;
 };
 
 class Pillar : public GameObject {
 public:
-    Pillar(int i);
+    Pillar(int i, int inc = 6);
     
     void Increment();
     bool Decrement();
@@ -41,6 +43,8 @@ private:
     int mDieType;
     int mStoredValue = 0;
     bn::vector<Die*, 4> mDice;
+    
+    bn::fixed currentAngle = 0;
 };
 
 class Crane : public GameObject {
@@ -72,19 +76,31 @@ private:
     uint mTotalDiceCount = 0;
     Pillar* mPillars[6];
     bn::list<PillarInformation, 7> mPillarData;
+    
+    static bool mFirst;
 };
 
-class RotateOnCrane : public Animation {
+class EaseOutAndScaleOnCrane : public Animation {
 public:
-    RotateOnRing(uint start, uint t, uint delay = 0);
+    EaseOutAndScaleOnCrane(bn::fixed destPos, bn::fixed destScale, uint time, Vector2 mod = Vector2(0, 0), uint delay = 0);
     
     void Init() override;
     bool Update() override;
     
+    uint GetTime();
+    void SetTime(uint time);
+    
 private:
-    Vector2 mEnd;
-    Vector2 mStart;
+    static Ellipse CraneEllipse;
+    constexpr static bn::fixed maxScale = 1;
+    constexpr static bn::fixed minScale = 0.5;
+    
+    bn::fixed mEndPosition;
+    bn::fixed mStartPosition;
+    bn::fixed mEndScale;
+    bn::fixed mStartScale;
+    Vector2 mModifier;
     uint mTime;
-}
+};
 
 #endif

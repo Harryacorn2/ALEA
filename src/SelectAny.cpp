@@ -28,11 +28,8 @@ void SceneManager::SelectAny() {
     score.SetPosition(0, -65);
     score.AlignCenter();
     score.SetZOrder(10000);
-    
-    // TODO: Reset after roll
      
     while (true) {
-        
         // MARK: - Die Selection Phase
         RollVector rollVector;
         

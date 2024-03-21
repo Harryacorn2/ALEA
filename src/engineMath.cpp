@@ -20,3 +20,7 @@ static bn::fixed m3Ident[3][3] =
 };
 
 const Matrix3 Matrix3::Identity(m3Ident);
+
+bn::fixed LerpFixed(bn::fixed a, bn::fixed b, bn::fixed t) {
+    return a + ((b - a) * t);
+}

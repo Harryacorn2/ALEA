@@ -3,6 +3,7 @@
 
 #include "Animation.h"
 #include "GameObject.h"
+#include "Log.h"
 
 Animation::Animation(uint delay) : mDelay(delay) {}
 
@@ -24,16 +25,16 @@ void Animation::Init() {}
 
 bool Animation::Update() { return true; }
 
-Lerp::Lerp(Vector2 dest, uint time, uint delay) : Animation(delay),
+LerpAnim::LerpAnim(Vector2 dest, uint time, uint delay) : Animation(delay),
 	mEnd(dest),
 	mStart(Vector2(0, 0)),
 	mTime(time) {}
 
-void Lerp::Init() {
+void LerpAnim::Init() {
 	mStart = mObject->GetPosition();
 }
 
-bool Lerp::Update() {
+bool LerpAnim::Update() {
 	if (mCurrentFrame >= mTime) {
 		mObject->SetPosition(mEnd);
 		return true;
@@ -154,6 +155,31 @@ uint EaseOutAndScale::GetTime() {
 
 void EaseOutAndScale::SetTime(uint time) {
     mTime = time;
+}
+
+
+Bob::Bob(Vector2 edge, uint period, uint delay) : Animation(delay), mEdge(edge), mTime(0), mPeriod(period) {
+    
+}
+    
+void Bob::Init() {
+    
+}
+
+bool Bob::Update() {
+    bn::fixed lin = (mTime * 360) / mPeriod;
+    lin = bn::degrees_lut_sin(lin);
+    
+    if (lin == 1) lin = 0.9999;
+    
+    mObject->SetPosition(Vector2(0, 0).Lerp(mEdge, lin));
+    
+    mTime++;
+    if (mTime >= mPeriod) {
+        mTime = 0;
+    }
+    
+    return false;
 }
 
 #endif

@@ -172,12 +172,12 @@ void SceneManager::AnimationDemo() {
 	auto die = D6(10);
 	Animator* anim = die.AddAnimator();
 	
-	anim->AddAnimation(new Lerp(Vector2(64, -64), 20, 30));
-	anim->AddAnimation(new Lerp(Vector2(64, 64), 20, 0));
-	anim->AddAnimation(new Lerp(Vector2(-64, 64), 20, 0));
-	anim->AddAnimation(new Lerp(Vector2(-64, -64), 20, 0));
-	anim->AddAnimation(new Lerp(Vector2(64, -64), 20, 0));
-	anim->AddAnimation(new Lerp(Vector2(0, 0), 20, 0));
+	anim->AddAnimation(new LerpAnim(Vector2(64, -64), 20, 30));
+	anim->AddAnimation(new LerpAnim(Vector2(64, 64), 20, 0));
+	anim->AddAnimation(new LerpAnim(Vector2(-64, 64), 20, 0));
+	anim->AddAnimation(new LerpAnim(Vector2(-64, -64), 20, 0));
+	anim->AddAnimation(new LerpAnim(Vector2(64, -64), 20, 0));
+	anim->AddAnimation(new LerpAnim(Vector2(0, 0), 20, 0));
 	die.Roll();
 	die.Update();
 	

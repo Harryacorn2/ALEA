@@ -578,6 +578,7 @@
 		7A5AC4D12ABA6A0E0022BFAA /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9AB7DC2ABA2E76008A2301 /* GameObject.cpp */; };
 		7A5AC4D22ABA6A0E0022BFAA /* Die.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9AB7DF2ABA2E76008A2301 /* Die.cpp */; };
 		7A5AC4D32ABA6A0E0022BFAA /* Transform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9AB7E02ABA2E76008A2301 /* Transform.cpp */; };
+		7A9DEE692AF3006100A6CFEC /* EllipseTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9DEE682AF3006100A6CFEC /* EllipseTest.cpp */; };
 		7AB3E9C02ABFC08900513ED0 /* Crane.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB3E9BF2ABFC08900513ED0 /* Crane.h */; };
 		7AB3E9C22ABFC28C00513ED0 /* Crane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AB3E9C12ABFC28C00513ED0 /* Crane.cpp */; };
 		7AD826652AC63C2900D69868 /* SRAMTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AD826642AC63C2900D69868 /* SRAMTest.cpp */; };
@@ -1218,6 +1219,7 @@
 		7A9AB7F62ABA2E76008A2301 /* empty.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = empty.bmp; sourceTree = "<group>"; };
 		7A9AB7F72ABA2E76008A2301 /* digits.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = digits.json; sourceTree = "<group>"; };
 		7A9ABCB82ABA5E23008A2301 /* Run */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = Run; sourceTree = "<group>"; };
+		7A9DEE682AF3006100A6CFEC /* EllipseTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EllipseTest.cpp; sourceTree = "<group>"; };
 		7AB3E9BF2ABFC08900513ED0 /* Crane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Crane.h; sourceTree = "<group>"; };
 		7AB3E9C12ABFC28C00513ED0 /* Crane.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Crane.cpp; sourceTree = "<group>"; };
 		7AD826642AC63C2900D69868 /* SRAMTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SRAMTest.cpp; sourceTree = "<group>"; };
@@ -2111,6 +2113,20 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		7A768D222AD73B410067B808 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Animations;
+			sourceTree = "<group>";
+		};
+		7A768D252AD73D230067B808 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Animations;
+			sourceTree = "<group>";
+		};
 		7A9AB7AB2ABA2E24008A2301 = {
 			isa = PBXGroup;
 			children = (
@@ -2135,11 +2151,11 @@
 		7A9AB7BF2ABA2E76008A2301 /* include */ = {
 			isa = PBXGroup;
 			children = (
+				7A9AB7C32ABA2E76008A2301 /* global.h */,
 				7A9AB7C22ABA2E76008A2301 /* GameObject.h */,
 				7AB3E9BE2ABFC03900513ED0 /* GameObjects */,
 				7AB3E9BD2ABFBF7500513ED0 /* Components */,
 				7A9AB7C02ABA2E76008A2301 /* yobani_sprite_font.h */,
-				7A9AB7C32ABA2E76008A2301 /* global.h */,
 				7A9AB7C52ABA2E76008A2301 /* forbidden */,
 				7A9AB7D42ABA2E76008A2301 /* SceneManager.h */,
 				7A9AB7D52ABA2E76008A2301 /* .gitignore */,
@@ -2205,6 +2221,7 @@
 		7AB3E9BD2ABFBF7500513ED0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				7A768D222AD73B410067B808 /* Animations */,
 				7A9AB7C92ABA2E76008A2301 /* Animation.h */,
 				7A9AB7CA2ABA2E76008A2301 /* Sprite.h */,
 				7A9AB7CB2ABA2E76008A2301 /* Animator.h */,
@@ -2232,6 +2249,7 @@
 				7A2D67BF2ABD295D004EAD10 /* SelectAny.cpp */,
 				7AF8D9672AC3E6D7009E34A3 /* TextObjectTest.cpp */,
 				7AD826642AC63C2900D69868 /* SRAMTest.cpp */,
+				7A9DEE682AF3006100A6CFEC /* EllipseTest.cpp */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -2255,6 +2273,7 @@
 		7AEF08172ABE91BF0015BC77 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				7A768D252AD73D230067B808 /* Animations */,
 				7A9AB7DD2ABA2E76008A2301 /* Sprite.cpp */,
 				7A9AB7DE2ABA2E76008A2301 /* Animation.cpp */,
 				7A9AB7E12ABA2E76008A2301 /* Animator.cpp */,
@@ -2891,6 +2910,7 @@
 				7A2E687A2ABA6B7B00C6FD91 /* bn_hw_memory.cpp in Sources */,
 				7A2E69742ABA6B7C00C6FD91 /* bn_link_manager.cpp in Sources */,
 				7A2E68322ABA6B7B00C6FD91 /* tonc_bios.s in Sources */,
+				7A9DEE692AF3006100A6CFEC /* EllipseTest.cpp in Sources */,
 				7A2E68492ABA6B7B00C6FD91 /* verdana9.s in Sources */,
 				7AF8D9682AC3E6D7009E34A3 /* TextObjectTest.cpp in Sources */,
 				7A2E68752ABA6B7B00C6FD91 /* bn_hw_sram.bn_ewram.cpp in Sources */,
