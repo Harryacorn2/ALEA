@@ -61,7 +61,12 @@ Sprite.o: /Users/harryacorn2/ALEA/ALEA/src/Sprite.cpp \
  /Users/harryacorn2/ALEA/butano/include/bn_unordered_set_fwd.h \
  /Users/harryacorn2/ALEA/butano/include/bn_optional.h \
  /Users/harryacorn2/ALEA/butano/include/bn_sprite_palette_item.h \
- /Users/harryacorn2/ALEA/butano/include/bn_color.h
+ /Users/harryacorn2/ALEA/butano/include/bn_color.h \
+ /Users/harryacorn2/ALEA/ALEA/include/Profiler.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_string.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_timer.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_unordered_map.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_unordered_map_fwd.h
 /Users/harryacorn2/ALEA/ALEA/include/Sprite.h:
 /Users/harryacorn2/ALEA/butano/include/bn_sprite_ptr.h:
 /Users/harryacorn2/ALEA/butano/include/bn_fixed.h:
@@ -125,3 +130,8 @@ Sprite.o: /Users/harryacorn2/ALEA/ALEA/src/Sprite.cpp \
 /Users/harryacorn2/ALEA/butano/include/bn_optional.h:
 /Users/harryacorn2/ALEA/butano/include/bn_sprite_palette_item.h:
 /Users/harryacorn2/ALEA/butano/include/bn_color.h:
+/Users/harryacorn2/ALEA/ALEA/include/Profiler.h:
+/Users/harryacorn2/ALEA/butano/include/bn_string.h:
+/Users/harryacorn2/ALEA/butano/include/bn_timer.h:
+/Users/harryacorn2/ALEA/butano/include/bn_unordered_map.h:
+/Users/harryacorn2/ALEA/butano/include/bn_unordered_map_fwd.h:

@@ -579,6 +579,8 @@
 		7A5AC4D22ABA6A0E0022BFAA /* Die.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9AB7DF2ABA2E76008A2301 /* Die.cpp */; };
 		7A5AC4D32ABA6A0E0022BFAA /* Transform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9AB7E02ABA2E76008A2301 /* Transform.cpp */; };
 		7A9DEE692AF3006100A6CFEC /* EllipseTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A9DEE682AF3006100A6CFEC /* EllipseTest.cpp */; };
+		7AA3210D2BB3727A0003D501 /* Profiler.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA3210C2BB3727A0003D501 /* Profiler.h */; };
+		7AA3210F2BB37F200003D501 /* Profiler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA3210E2BB37F200003D501 /* Profiler.cpp */; };
 		7AB3E9C02ABFC08900513ED0 /* Crane.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB3E9BF2ABFC08900513ED0 /* Crane.h */; };
 		7AB3E9C22ABFC28C00513ED0 /* Crane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AB3E9C12ABFC28C00513ED0 /* Crane.cpp */; };
 		7AD826652AC63C2900D69868 /* SRAMTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AD826642AC63C2900D69868 /* SRAMTest.cpp */; };
@@ -1220,6 +1222,8 @@
 		7A9AB7F72ABA2E76008A2301 /* digits.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = digits.json; sourceTree = "<group>"; };
 		7A9ABCB82ABA5E23008A2301 /* Run */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = Run; sourceTree = "<group>"; };
 		7A9DEE682AF3006100A6CFEC /* EllipseTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EllipseTest.cpp; sourceTree = "<group>"; };
+		7AA3210C2BB3727A0003D501 /* Profiler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Profiler.h; sourceTree = "<group>"; };
+		7AA3210E2BB37F200003D501 /* Profiler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Profiler.cpp; sourceTree = "<group>"; };
 		7AB3E9BF2ABFC08900513ED0 /* Crane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Crane.h; sourceTree = "<group>"; };
 		7AB3E9C12ABFC28C00513ED0 /* Crane.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Crane.cpp; sourceTree = "<group>"; };
 		7AD826642AC63C2900D69868 /* SRAMTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SRAMTest.cpp; sourceTree = "<group>"; };
@@ -2165,6 +2169,7 @@
 				7A9AB7D92ABA2E76008A2301 /* ColorUtility.h */,
 				7AF8D9692AC3EEED009E34A3 /* Log.h */,
 				7AF8D96F2AC41DA0009E34A3 /* Random.h */,
+				7AA3210C2BB3727A0003D501 /* Profiler.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -2190,6 +2195,7 @@
 				7A9AB7E32ABA2E76008A2301 /* engineMath.cpp */,
 				7AF8D96B2AC3EFC8009E34A3 /* Log.cpp */,
 				7AF8D9712AC41E9C009E34A3 /* Random.cpp */,
+				7AA3210E2BB37F200003D501 /* Profiler.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -2445,6 +2451,7 @@
 				7A2E68B72ABA6B7B00C6FD91 /* bn_sprite_third_attributes.h in Headers */,
 				7A2E681B2ABA6B7A00C6FD91 /* fp_math.h in Headers */,
 				7A2E685E2ABA6B7B00C6FD91 /* bn_hw_keypad.h in Headers */,
+				7AA3210D2BB3727A0003D501 /* Profiler.h in Headers */,
 				7A2E68972ABA6B7B00C6FD91 /* bn_unordered_set.h in Headers */,
 				7A2E69482ABA6B7C00C6FD91 /* bn_sprite_first_attributes_hbe_ptr.h in Headers */,
 				7A2E69312ABA6B7C00C6FD91 /* bn_utility.h in Headers */,
@@ -2974,6 +2981,7 @@
 				7A2E686E2ABA6B7B00C6FD91 /* bn_hw_bg_blocks.bn_iwram.cpp in Sources */,
 				7A2E68782ABA6B7B00C6FD91 /* bn_hw_palettes.cpp in Sources */,
 				7A2D67C52ABD295E004EAD10 /* OldD6.cpp in Sources */,
+				7AA3210F2BB37F200003D501 /* Profiler.cpp in Sources */,
 				7A5AC4CD2ABA6A0E0022BFAA /* Animation.cpp in Sources */,
 				7A2E69E02ABA6B7D00C6FD91 /* bn_audio_manager.cpp in Sources */,
 				7A5AC4CA2ABA6A0E0022BFAA /* engineMath.cpp in Sources */,

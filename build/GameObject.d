@@ -73,7 +73,12 @@ GameObject.o: /Users/harryacorn2/ALEA/ALEA/src/GameObject.cpp \
  /Users/harryacorn2/ALEA/ALEA/include/Animation.h \
  /Users/harryacorn2/ALEA/butano/include/bn_format.h \
  /Users/harryacorn2/ALEA/butano/include/bn_string.h \
- /Users/harryacorn2/ALEA/ALEA/include/Random.h
+ /Users/harryacorn2/ALEA/ALEA/include/Random.h \
+ /Users/harryacorn2/ALEA/ALEA/include/Profiler.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_string.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_timer.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_unordered_map.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_unordered_map_fwd.h
 /Users/harryacorn2/ALEA/ALEA/include/GameObject.h:
 /Users/harryacorn2/ALEA/ALEA/include/global.h:
 /Users/harryacorn2/ALEA/butano/include/bn_core.h:
@@ -149,3 +154,8 @@ GameObject.o: /Users/harryacorn2/ALEA/ALEA/src/GameObject.cpp \
 /Users/harryacorn2/ALEA/butano/include/bn_format.h:
 /Users/harryacorn2/ALEA/butano/include/bn_string.h:
 /Users/harryacorn2/ALEA/ALEA/include/Random.h:
+/Users/harryacorn2/ALEA/ALEA/include/Profiler.h:
+/Users/harryacorn2/ALEA/butano/include/bn_string.h:
+/Users/harryacorn2/ALEA/butano/include/bn_timer.h:
+/Users/harryacorn2/ALEA/butano/include/bn_unordered_map.h:
+/Users/harryacorn2/ALEA/butano/include/bn_unordered_map_fwd.h:

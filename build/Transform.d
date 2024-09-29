@@ -38,7 +38,21 @@ Transform.o: /Users/harryacorn2/ALEA/ALEA/src/Transform.cpp \
  /Users/harryacorn2/ALEA/butano/include/bn_memory_alias.h \
  /Users/harryacorn2/ALEA/butano/include/bn_sprite_affine_mat_ptr.h \
  /Users/harryacorn2/ALEA/butano/include/bn_affine_mat_attributes.h \
- /Users/harryacorn2/ALEA/butano/include/bn_math.h
+ /Users/harryacorn2/ALEA/butano/include/bn_math.h \
+ /Users/harryacorn2/ALEA/ALEA/include/Profiler.h \
+ /Users/harryacorn2/ALEA/ALEA/include/global.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_vector.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_vector_fwd.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_string.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_timer.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_unordered_map.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_memory.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_unique_ptr.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_unique_ptr_fwd.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_config_log.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_log_backend.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_power_of_two.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_unordered_map_fwd.h
 /Users/harryacorn2/ALEA/ALEA/include/Transform.h:
 /Users/harryacorn2/ALEA/ALEA/include/engineMath.h:
 /Users/harryacorn2/ALEA/butano/include/bn_core.h:
@@ -79,3 +93,17 @@ Transform.o: /Users/harryacorn2/ALEA/ALEA/src/Transform.cpp \
 /Users/harryacorn2/ALEA/butano/include/bn_sprite_affine_mat_ptr.h:
 /Users/harryacorn2/ALEA/butano/include/bn_affine_mat_attributes.h:
 /Users/harryacorn2/ALEA/butano/include/bn_math.h:
+/Users/harryacorn2/ALEA/ALEA/include/Profiler.h:
+/Users/harryacorn2/ALEA/ALEA/include/global.h:
+/Users/harryacorn2/ALEA/butano/include/bn_vector.h:
+/Users/harryacorn2/ALEA/butano/include/bn_vector_fwd.h:
+/Users/harryacorn2/ALEA/butano/include/bn_string.h:
+/Users/harryacorn2/ALEA/butano/include/bn_timer.h:
+/Users/harryacorn2/ALEA/butano/include/bn_unordered_map.h:
+/Users/harryacorn2/ALEA/butano/include/bn_memory.h:
+/Users/harryacorn2/ALEA/butano/include/bn_unique_ptr.h:
+/Users/harryacorn2/ALEA/butano/include/bn_unique_ptr_fwd.h:
+/Users/harryacorn2/ALEA/butano/include/bn_config_log.h:
+/Users/harryacorn2/ALEA/butano/include/bn_log_backend.h:
+/Users/harryacorn2/ALEA/butano/include/bn_power_of_two.h:
+/Users/harryacorn2/ALEA/butano/include/bn_unordered_map_fwd.h:

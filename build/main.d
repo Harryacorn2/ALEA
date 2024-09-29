@@ -84,7 +84,11 @@ main.o: /Users/harryacorn2/ALEA/ALEA/src/main.cpp \
  /Users/harryacorn2/ALEA/butano/include/bn_color.h \
  /Users/harryacorn2/ALEA/butano/include/bn_sprite_tiles_ptr.h \
  /Users/harryacorn2/ALEA/butano/include/bn_sprite_tiles_item.h \
- /Users/harryacorn2/ALEA/ALEA/include/Component.h
+ /Users/harryacorn2/ALEA/ALEA/include/Component.h \
+ /Users/harryacorn2/ALEA/ALEA/include/Profiler.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_timer.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_unordered_map.h \
+ /Users/harryacorn2/ALEA/butano/include/bn_unordered_map_fwd.h
 /Users/harryacorn2/ALEA/ALEA/include/global.h:
 /Users/harryacorn2/ALEA/butano/include/bn_core.h:
 /Users/harryacorn2/ALEA/butano/include/bn_span.h:
@@ -171,3 +175,7 @@ main.o: /Users/harryacorn2/ALEA/ALEA/src/main.cpp \
 /Users/harryacorn2/ALEA/butano/include/bn_sprite_tiles_ptr.h:
 /Users/harryacorn2/ALEA/butano/include/bn_sprite_tiles_item.h:
 /Users/harryacorn2/ALEA/ALEA/include/Component.h:
+/Users/harryacorn2/ALEA/ALEA/include/Profiler.h:
+/Users/harryacorn2/ALEA/butano/include/bn_timer.h:
+/Users/harryacorn2/ALEA/butano/include/bn_unordered_map.h:
+/Users/harryacorn2/ALEA/butano/include/bn_unordered_map_fwd.h:

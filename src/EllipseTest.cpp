@@ -4,6 +4,8 @@
 #include "Animation.h"
 #include "Crane.h"
 
+#include "Profiler.h"
+
 void SceneManager::EllipseTest() {
     TextLine title("ALEA", yobani_fixed_16x16_sprite_font);
     title.AlignCenter();
@@ -62,10 +64,17 @@ void SceneManager::EllipseTest() {
     bool notStarted = true;
     
     while (notStarted) {
+        PROFILE_CONTROL();
+        PROFILE_SCOPE(Frame);
+        
+        Profiler::StartEvent("Rotate Dice");
         RotateDice();
+        Profiler::EndEvent();
         
         GameObject::UpdateAll();
         GameObject::DrawAll();
+        
+        PROFILE_SCOPE(Butano);
         bn::core::update();
         
         if (bn::keypad::start_pressed()) {

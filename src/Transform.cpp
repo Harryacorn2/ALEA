@@ -2,6 +2,7 @@
 #define TRANSFORM_CPP
 
 #include "Transform.h"
+#include "Profiler.h"
 
 Transform::Transform() : mBufferedMatrix(Matrix3::Identity), mTranslation(Vector2(0, 0)) {}
 
@@ -27,14 +28,20 @@ void Transform::SetTranslation(Vector2 translation) {
 }
 
 Matrix3 Transform::GetMatrix() {
-	if (mMatrixIsCurrent) return mBufferedMatrix;
+    PROFILE_SCOPE(Get_Matrix);
+    if (mMatrixIsCurrent) {
+        return mBufferedMatrix;
+    }
 	
-	auto retVal = Matrix3::CreateScale(mScale);
-	retVal *= Matrix3::CreateRotation(mRotation);
-	retVal *= Matrix3::CreateTranslation(mTranslation);
+	{
+        PROFILE_SCOPE(Matrix_Mult);
+        auto retVal = Matrix3::CreateScale(mScale);
+        retVal *= Matrix3::CreateRotation(mRotation);
+        retVal *= Matrix3::CreateTranslation(mTranslation);
+        mBufferedMatrix = retVal;
+    }
 	
-	mBufferedMatrix = retVal;
-	
+    mMatrixIsCurrent = true;
 	return mBufferedMatrix;
 }
 

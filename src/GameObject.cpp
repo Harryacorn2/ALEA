@@ -9,6 +9,8 @@
 #include "bn_format.h"
 #include "Random.h"
 
+#include "Profiler.h"
+
 int GameObject::mCount = 0;
 bn::unordered_set<GameObject*, MAX_SPRITES> GameObject::mAll;
 
@@ -239,6 +241,7 @@ void GameObject::SetScale(const bn::fixed scale) { mTransform.SetScale(scale); }
 int GameObject::GetCount() { return mCount; }
 
 void GameObject::UpdateAll() {
+    PROFILE_SCOPE(UpdateAll);
 	for (auto obj : mAll) {
 		obj->Update();
 		obj->BaseUpdate();
@@ -246,6 +249,7 @@ void GameObject::UpdateAll() {
 }
 
 void GameObject::DrawAll() {
+    PROFILE_SCOPE(DrawAll);
 	for (auto obj : mAll) {
 		obj->Draw();
 		obj->BaseDraw();

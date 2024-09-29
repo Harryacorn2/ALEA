@@ -3,24 +3,38 @@
 
 #include "Sprite.h"
 #include "GameObject.h"
+#include "Profiler.h"
 
 void Sprite::Update() {
 	
 }
 
 void Sprite::Draw() {
-	auto parent = mParent->GetParent();
-	auto matrix = mParent->GetTransform().GetMatrix();
+    PROFILE_SCOPE(Draw_Sprite);
+    
+    auto parent = mParent->GetParent();
+    auto matrix = mParent->GetTransform().GetMatrix();
+    Matrix3 ownMatrix = Matrix3::Identity;
     
     if (mTransform.has_value()) {
-        matrix = mTransform.value().GetMatrix() * matrix;
+        ownMatrix = mTransform.value().GetMatrix();
     }
-	
-	while (parent != NULL) {
-		matrix *= parent->GetTransform().GetMatrix();
-		parent = parent->GetParent();
-	}
-	
+    
+    {
+        PROFILE_SCOPE(Matrix_Mult);
+        matrix = ownMatrix * matrix;
+    }
+    
+    while (parent != NULL) {
+        auto parentMatrix = parent->GetTransform().GetMatrix();
+        {
+            PROFILE_SCOPE(Matrix_Mult);
+            matrix *= parentMatrix;
+        }
+        parent = parent->GetParent();
+    }
+    
+    PROFILE_SCOPE(Apply_To_Sprite);
 	matrix.ApplyToSprite(mSpritePtr, mParent->IsRotationLocked());
 }
 

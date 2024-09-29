@@ -1,5 +1,6 @@
 #include "global.h"
 #include "SceneManager.h"
+#include "Profiler.h"
 
 int main()
 { 

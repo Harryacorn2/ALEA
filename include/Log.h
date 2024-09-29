@@ -5,11 +5,11 @@
 
 class Log {
 public:
-    static void Raw(const char* cstring[64]);
-    static void Raw(bn::string<64> string);
+    static void Raw(const char* cstring[128]);
+    static void Raw(bn::string<128> string);
     static void Format(const char* cstring, ...);
     
-    static bn::string<64> ToFormat();
+    static bn::string<128> ToFormat();
 };
 
 #endif
